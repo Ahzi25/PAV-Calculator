@@ -75,31 +75,6 @@ namespace PAV___Calculator
         {
 
         }
-      
-        private void MclearButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MrecallButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MplusButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MminusButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MSButton_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void ReciprocalButton_Click(object sender, EventArgs e)
         {
@@ -182,6 +157,16 @@ namespace PAV___Calculator
         }
 
         private void DivideButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Table1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Table2_Paint(object sender, PaintEventArgs e)
         {
 
         }
