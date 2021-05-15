@@ -64,9 +64,9 @@ namespace PAV___Calculator
             // EqualButton
             // 
             this.EqualButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EqualButton.Location = new System.Drawing.Point(225, 233);
+            this.EqualButton.Location = new System.Drawing.Point(225, 248);
             this.EqualButton.Name = "EqualButton";
-            this.EqualButton.Size = new System.Drawing.Size(69, 40);
+            this.EqualButton.Size = new System.Drawing.Size(69, 43);
             this.EqualButton.TabIndex = 0;
             this.EqualButton.Text = "=";
             this.EqualButton.UseVisualStyleBackColor = true;
@@ -75,9 +75,9 @@ namespace PAV___Calculator
             // PlusButton
             // 
             this.PlusButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PlusButton.Location = new System.Drawing.Point(225, 187);
+            this.PlusButton.Location = new System.Drawing.Point(225, 199);
             this.PlusButton.Name = "PlusButton";
-            this.PlusButton.Size = new System.Drawing.Size(69, 40);
+            this.PlusButton.Size = new System.Drawing.Size(69, 43);
             this.PlusButton.TabIndex = 1;
             this.PlusButton.Text = "+";
             this.PlusButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -87,9 +87,9 @@ namespace PAV___Calculator
             // MinusButton
             // 
             this.MinusButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MinusButton.Location = new System.Drawing.Point(225, 141);
+            this.MinusButton.Location = new System.Drawing.Point(225, 150);
             this.MinusButton.Name = "MinusButton";
-            this.MinusButton.Size = new System.Drawing.Size(69, 40);
+            this.MinusButton.Size = new System.Drawing.Size(69, 43);
             this.MinusButton.TabIndex = 2;
             this.MinusButton.Text = "-";
             this.MinusButton.UseVisualStyleBackColor = true;
@@ -98,9 +98,9 @@ namespace PAV___Calculator
             // MultiplyButton
             // 
             this.MultiplyButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MultiplyButton.Location = new System.Drawing.Point(225, 95);
+            this.MultiplyButton.Location = new System.Drawing.Point(225, 101);
             this.MultiplyButton.Name = "MultiplyButton";
-            this.MultiplyButton.Size = new System.Drawing.Size(69, 40);
+            this.MultiplyButton.Size = new System.Drawing.Size(69, 43);
             this.MultiplyButton.TabIndex = 3;
             this.MultiplyButton.Text = "×";
             this.MultiplyButton.UseVisualStyleBackColor = true;
@@ -109,9 +109,9 @@ namespace PAV___Calculator
             // DivideButton
             // 
             this.DivideButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DivideButton.Location = new System.Drawing.Point(225, 49);
+            this.DivideButton.Location = new System.Drawing.Point(225, 52);
             this.DivideButton.Name = "DivideButton";
-            this.DivideButton.Size = new System.Drawing.Size(69, 40);
+            this.DivideButton.Size = new System.Drawing.Size(69, 43);
             this.DivideButton.TabIndex = 4;
             this.DivideButton.Text = "÷";
             this.DivideButton.UseVisualStyleBackColor = true;
@@ -120,9 +120,9 @@ namespace PAV___Calculator
             // DotButton
             // 
             this.DotButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DotButton.Location = new System.Drawing.Point(151, 233);
+            this.DotButton.Location = new System.Drawing.Point(151, 248);
             this.DotButton.Name = "DotButton";
-            this.DotButton.Size = new System.Drawing.Size(68, 40);
+            this.DotButton.Size = new System.Drawing.Size(68, 43);
             this.DotButton.TabIndex = 5;
             this.DotButton.Text = ".";
             this.DotButton.UseVisualStyleBackColor = true;
@@ -131,9 +131,9 @@ namespace PAV___Calculator
             // OneButton
             // 
             this.OneButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OneButton.Location = new System.Drawing.Point(3, 187);
+            this.OneButton.Location = new System.Drawing.Point(3, 199);
             this.OneButton.Name = "OneButton";
-            this.OneButton.Size = new System.Drawing.Size(68, 40);
+            this.OneButton.Size = new System.Drawing.Size(68, 43);
             this.OneButton.TabIndex = 6;
             this.OneButton.Text = "1";
             this.OneButton.UseVisualStyleBackColor = true;
@@ -142,9 +142,9 @@ namespace PAV___Calculator
             // FourButton
             // 
             this.FourButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FourButton.Location = new System.Drawing.Point(3, 141);
+            this.FourButton.Location = new System.Drawing.Point(3, 150);
             this.FourButton.Name = "FourButton";
-            this.FourButton.Size = new System.Drawing.Size(68, 40);
+            this.FourButton.Size = new System.Drawing.Size(68, 43);
             this.FourButton.TabIndex = 7;
             this.FourButton.Text = "4";
             this.FourButton.UseVisualStyleBackColor = true;
@@ -153,9 +153,9 @@ namespace PAV___Calculator
             // SevenButton
             // 
             this.SevenButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SevenButton.Location = new System.Drawing.Point(3, 95);
+            this.SevenButton.Location = new System.Drawing.Point(3, 101);
             this.SevenButton.Name = "SevenButton";
-            this.SevenButton.Size = new System.Drawing.Size(68, 40);
+            this.SevenButton.Size = new System.Drawing.Size(68, 43);
             this.SevenButton.TabIndex = 8;
             this.SevenButton.Text = "7";
             this.SevenButton.UseVisualStyleBackColor = true;
@@ -164,9 +164,9 @@ namespace PAV___Calculator
             // SquarerootButton
             // 
             this.SquarerootButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SquarerootButton.Location = new System.Drawing.Point(151, 49);
+            this.SquarerootButton.Location = new System.Drawing.Point(151, 52);
             this.SquarerootButton.Name = "SquarerootButton";
-            this.SquarerootButton.Size = new System.Drawing.Size(68, 40);
+            this.SquarerootButton.Size = new System.Drawing.Size(68, 43);
             this.SquarerootButton.TabIndex = 9;
             this.SquarerootButton.Text = "√ x";
             this.SquarerootButton.UseVisualStyleBackColor = true;
@@ -175,9 +175,9 @@ namespace PAV___Calculator
             // ZeroButton
             // 
             this.ZeroButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ZeroButton.Location = new System.Drawing.Point(77, 233);
+            this.ZeroButton.Location = new System.Drawing.Point(77, 248);
             this.ZeroButton.Name = "ZeroButton";
-            this.ZeroButton.Size = new System.Drawing.Size(68, 40);
+            this.ZeroButton.Size = new System.Drawing.Size(68, 43);
             this.ZeroButton.TabIndex = 10;
             this.ZeroButton.Text = "0";
             this.ZeroButton.UseVisualStyleBackColor = true;
@@ -186,9 +186,9 @@ namespace PAV___Calculator
             // TwoButton
             // 
             this.TwoButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TwoButton.Location = new System.Drawing.Point(77, 187);
+            this.TwoButton.Location = new System.Drawing.Point(77, 199);
             this.TwoButton.Name = "TwoButton";
-            this.TwoButton.Size = new System.Drawing.Size(68, 40);
+            this.TwoButton.Size = new System.Drawing.Size(68, 43);
             this.TwoButton.TabIndex = 11;
             this.TwoButton.Text = "2";
             this.TwoButton.UseVisualStyleBackColor = true;
@@ -197,9 +197,9 @@ namespace PAV___Calculator
             // FiveButton
             // 
             this.FiveButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FiveButton.Location = new System.Drawing.Point(77, 141);
+            this.FiveButton.Location = new System.Drawing.Point(77, 150);
             this.FiveButton.Name = "FiveButton";
-            this.FiveButton.Size = new System.Drawing.Size(68, 40);
+            this.FiveButton.Size = new System.Drawing.Size(68, 43);
             this.FiveButton.TabIndex = 12;
             this.FiveButton.Text = "5";
             this.FiveButton.UseVisualStyleBackColor = true;
@@ -208,9 +208,9 @@ namespace PAV___Calculator
             // EightButton
             // 
             this.EightButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EightButton.Location = new System.Drawing.Point(77, 95);
+            this.EightButton.Location = new System.Drawing.Point(77, 101);
             this.EightButton.Name = "EightButton";
-            this.EightButton.Size = new System.Drawing.Size(68, 40);
+            this.EightButton.Size = new System.Drawing.Size(68, 43);
             this.EightButton.TabIndex = 13;
             this.EightButton.Text = "8";
             this.EightButton.Click += new System.EventHandler(this.EightButton_Click);
@@ -218,9 +218,9 @@ namespace PAV___Calculator
             // SquareButton
             // 
             this.SquareButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SquareButton.Location = new System.Drawing.Point(77, 49);
+            this.SquareButton.Location = new System.Drawing.Point(77, 52);
             this.SquareButton.Name = "SquareButton";
-            this.SquareButton.Size = new System.Drawing.Size(68, 40);
+            this.SquareButton.Size = new System.Drawing.Size(68, 43);
             this.SquareButton.TabIndex = 14;
             this.SquareButton.Text = "x²";
             this.SquareButton.UseVisualStyleBackColor = true;
@@ -229,9 +229,9 @@ namespace PAV___Calculator
             // NegateButton
             // 
             this.NegateButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NegateButton.Location = new System.Drawing.Point(3, 233);
+            this.NegateButton.Location = new System.Drawing.Point(3, 248);
             this.NegateButton.Name = "NegateButton";
-            this.NegateButton.Size = new System.Drawing.Size(68, 40);
+            this.NegateButton.Size = new System.Drawing.Size(68, 43);
             this.NegateButton.TabIndex = 15;
             this.NegateButton.TabStop = false;
             this.NegateButton.Text = "+/-";
@@ -241,9 +241,9 @@ namespace PAV___Calculator
             // ThreeButton
             // 
             this.ThreeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ThreeButton.Location = new System.Drawing.Point(151, 187);
+            this.ThreeButton.Location = new System.Drawing.Point(151, 199);
             this.ThreeButton.Name = "ThreeButton";
-            this.ThreeButton.Size = new System.Drawing.Size(68, 40);
+            this.ThreeButton.Size = new System.Drawing.Size(68, 43);
             this.ThreeButton.TabIndex = 16;
             this.ThreeButton.Text = "3";
             this.ThreeButton.UseVisualStyleBackColor = true;
@@ -252,9 +252,9 @@ namespace PAV___Calculator
             // SixButton
             // 
             this.SixButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SixButton.Location = new System.Drawing.Point(151, 141);
+            this.SixButton.Location = new System.Drawing.Point(151, 150);
             this.SixButton.Name = "SixButton";
-            this.SixButton.Size = new System.Drawing.Size(68, 40);
+            this.SixButton.Size = new System.Drawing.Size(68, 43);
             this.SixButton.TabIndex = 17;
             this.SixButton.Text = "6";
             this.SixButton.UseVisualStyleBackColor = true;
@@ -263,9 +263,9 @@ namespace PAV___Calculator
             // NineButton
             // 
             this.NineButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NineButton.Location = new System.Drawing.Point(151, 95);
+            this.NineButton.Location = new System.Drawing.Point(151, 101);
             this.NineButton.Name = "NineButton";
-            this.NineButton.Size = new System.Drawing.Size(68, 40);
+            this.NineButton.Size = new System.Drawing.Size(68, 43);
             this.NineButton.TabIndex = 18;
             this.NineButton.Text = "9";
             this.NineButton.UseVisualStyleBackColor = true;
@@ -274,9 +274,9 @@ namespace PAV___Calculator
             // ReciprocalButton
             // 
             this.ReciprocalButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ReciprocalButton.Location = new System.Drawing.Point(3, 49);
+            this.ReciprocalButton.Location = new System.Drawing.Point(3, 52);
             this.ReciprocalButton.Name = "ReciprocalButton";
-            this.ReciprocalButton.Size = new System.Drawing.Size(68, 40);
+            this.ReciprocalButton.Size = new System.Drawing.Size(68, 43);
             this.ReciprocalButton.TabIndex = 19;
             this.ReciprocalButton.Text = "1/x";
             this.ReciprocalButton.UseVisualStyleBackColor = true;
@@ -296,11 +296,14 @@ namespace PAV___Calculator
             // TotalDisplay
             // 
             this.TotalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TotalDisplay.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TotalDisplay.Location = new System.Drawing.Point(3, 3);
             this.TotalDisplay.Multiline = true;
             this.TotalDisplay.Name = "TotalDisplay";
-            this.TotalDisplay.Size = new System.Drawing.Size(297, 64);
+            this.TotalDisplay.Size = new System.Drawing.Size(297, 46);
             this.TotalDisplay.TabIndex = 30;
+            this.TotalDisplay.Text = "0";
+            this.TotalDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TotalDisplay.TextChanged += new System.EventHandler(this.TotalDisplay_TextChanged);
             // 
             // PercentButton
@@ -308,7 +311,7 @@ namespace PAV___Calculator
             this.PercentButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PercentButton.Location = new System.Drawing.Point(3, 3);
             this.PercentButton.Name = "PercentButton";
-            this.PercentButton.Size = new System.Drawing.Size(68, 40);
+            this.PercentButton.Size = new System.Drawing.Size(68, 43);
             this.PercentButton.TabIndex = 34;
             this.PercentButton.Text = "%";
             this.PercentButton.UseVisualStyleBackColor = true;
@@ -319,7 +322,7 @@ namespace PAV___Calculator
             this.ClearentryButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ClearentryButton.Location = new System.Drawing.Point(77, 3);
             this.ClearentryButton.Name = "ClearentryButton";
-            this.ClearentryButton.Size = new System.Drawing.Size(68, 40);
+            this.ClearentryButton.Size = new System.Drawing.Size(68, 43);
             this.ClearentryButton.TabIndex = 33;
             this.ClearentryButton.Text = "CE";
             this.ClearentryButton.UseVisualStyleBackColor = true;
@@ -330,7 +333,7 @@ namespace PAV___Calculator
             this.ClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ClearButton.Location = new System.Drawing.Point(151, 3);
             this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(68, 40);
+            this.ClearButton.Size = new System.Drawing.Size(68, 43);
             this.ClearButton.TabIndex = 32;
             this.ClearButton.Text = "C";
             this.ClearButton.UseVisualStyleBackColor = true;
@@ -341,7 +344,7 @@ namespace PAV___Calculator
             this.EraseButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EraseButton.Location = new System.Drawing.Point(225, 3);
             this.EraseButton.Name = "EraseButton";
-            this.EraseButton.Size = new System.Drawing.Size(69, 40);
+            this.EraseButton.Size = new System.Drawing.Size(69, 43);
             this.EraseButton.TabIndex = 31;
             this.EraseButton.Text = "<-";
             this.EraseButton.UseVisualStyleBackColor = true;
@@ -378,7 +381,7 @@ namespace PAV___Calculator
             this.Table2.Controls.Add(this.SquarerootButton, 2, 1);
             this.Table2.Controls.Add(this.SevenButton, 0, 2);
             this.Table2.Controls.Add(this.DivideButton, 3, 1);
-            this.Table2.Location = new System.Drawing.Point(3, 73);
+            this.Table2.Location = new System.Drawing.Point(3, 55);
             this.Table2.Name = "Table2";
             this.Table2.RowCount = 6;
             this.Table2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66666F));
@@ -387,7 +390,7 @@ namespace PAV___Calculator
             this.Table2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66666F));
             this.Table2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66666F));
             this.Table2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66666F));
-            this.Table2.Size = new System.Drawing.Size(297, 276);
+            this.Table2.Size = new System.Drawing.Size(297, 294);
             this.Table2.TabIndex = 35;
             this.Table2.Paint += new System.Windows.Forms.PaintEventHandler(this.Table2_Paint);
             // 
@@ -395,14 +398,13 @@ namespace PAV___Calculator
             // 
             this.Table1.ColumnCount = 1;
             this.Table1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Table1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.Table1.Controls.Add(this.TotalDisplay, 0, 0);
             this.Table1.Controls.Add(this.Table2, 0, 1);
             this.Table1.Location = new System.Drawing.Point(12, 44);
             this.Table1.Name = "Table1";
             this.Table1.RowCount = 2;
-            this.Table1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.Table1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.Table1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.Table1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.Table1.Size = new System.Drawing.Size(303, 352);
             this.Table1.TabIndex = 36;
             this.Table1.Paint += new System.Windows.Forms.PaintEventHandler(this.Table1_Paint);
@@ -412,7 +414,7 @@ namespace PAV___Calculator
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(330, 409);
+            this.ClientSize = new System.Drawing.Size(328, 409);
             this.Controls.Add(this.Table1);
             this.Controls.Add(this.StandardLabel);
             this.Name = "Form1";
