@@ -14,6 +14,7 @@ namespace PAV___Calculator
     {
         Double resVal = 0;
         String operand = "";
+        String first_num = "";
         String sec_num = "";
         bool showprevoperation = false;
 
@@ -37,7 +38,7 @@ namespace PAV___Calculator
             
             if (resVal != 0)
             {
-                sec_num += button.Text;
+                sec_num = button.Text;
             }
         }
 
@@ -119,8 +120,8 @@ namespace PAV___Calculator
             {
                 case "+":
                     TotalDisplay.Text = (resVal + Double.Parse(TotalDisplay.Text)).ToString();
-                    prevOperation.Text = resVal + " " + "+" + " " + sec_num + " " + "=";
-                    sec_num = "";
+                    first_num = (Double.Parse(TotalDisplay.Text) - Byte.Parse(sec_num)).ToString();
+                    prevOperation.Text = first_num + " " + "+" + " " + sec_num + " " + "=";
                     break;
                 case "-":
                     TotalDisplay.Text = (resVal - Double.Parse(TotalDisplay.Text)).ToString();
