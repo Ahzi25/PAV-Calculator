@@ -12,6 +12,11 @@ namespace PAV___Calculator
 {
     public partial class Form1 : Form
     {
+        Double resVal = 0;
+        String operand = "";
+        String sec_num = "";
+        bool showprevoperation = false;
+
         public Form1()
         { 
             InitializeComponent();
@@ -21,9 +26,19 @@ namespace PAV___Calculator
         {
 
         }
-        private void EqualButton_Click(object sender, EventArgs e)
+        private void Numbutton_Click(object sender, EventArgs e)
         {
+            if ((TotalDisplay.Text == "0") || (showprevoperation))
+                TotalDisplay.Clear();
+
+            showprevoperation = false;
+            Button button = (Button)sender;
+            TotalDisplay.Text += button.Text;
             
+            if (resVal != 0)
+            {
+                sec_num += button.Text;
+            }
         }
 
         private void DotButton_Click(object sender, EventArgs e)
@@ -42,13 +57,6 @@ namespace PAV___Calculator
         private void SquarerootButton_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void FiveButton_Click(object sender, EventArgs e)
-        {
-            if (TotalDisplay.Text == "0")
-                TotalDisplay.Clear();
-            TotalDisplay.Text += "5";
         }
 
         private void ReciprocalButton_Click(object sender, EventArgs e)
@@ -86,12 +94,46 @@ namespace PAV___Calculator
         private void ClearButton_Click(object sender, EventArgs e)
         {
             TotalDisplay.Text = "0";
+            prevOperation.Text = "";
         }
 
         private void ClearentryButton_Click(object sender, EventArgs e)
         {
             TotalDisplay.Text = "0";
+            resVal = 0;
 
+        }
+
+        private void OperatorButton_Click(object sender, EventArgs e)
+        {
+            Button op = (Button)sender;
+            operand = op.Text;
+            resVal = Double.Parse(TotalDisplay.Text);
+            prevOperation.Text = resVal + " " + operand;
+            showprevoperation = true;   
+        }
+
+        private void EqualButton_Click(object sender, EventArgs e)
+        {
+            switch (operand)
+            {
+                case "+":
+                    TotalDisplay.Text = (resVal + Double.Parse(TotalDisplay.Text)).ToString();
+                    prevOperation.Text = resVal + " " + "+" + " " + sec_num + " " + "=";
+                    sec_num = "";
+                    break;
+                case "-":
+                    TotalDisplay.Text = (resVal - Double.Parse(TotalDisplay.Text)).ToString();
+                    break;
+                case "*":
+                    TotalDisplay.Text = (resVal * Double.Parse(TotalDisplay.Text)).ToString();
+                    break;
+                case "/":
+                    TotalDisplay.Text = (resVal / Double.Parse(TotalDisplay.Text)).ToString();
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void Table1_Paint(object sender, PaintEventArgs e)
@@ -104,18 +146,5 @@ namespace PAV___Calculator
 
         }
 
-        private void OperatorButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Numbutton_Click(object sender, EventArgs e)
-        {
-            if (TotalDisplay.Text == "0")
-                TotalDisplay.Clear();
-
-            Button button = (Button)sender;
-            TotalDisplay.Text += button.Text;
-        }
     }
 }
