@@ -82,7 +82,7 @@ namespace PAV___Calculator
             this.PlusButton.Text = "+";
             this.PlusButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.PlusButton.UseVisualStyleBackColor = true;
-            this.PlusButton.Click += new System.EventHandler(this.PlusButton_Click);
+            this.PlusButton.Click += new System.EventHandler(this.OperatorButton_Click);
             // 
             // MinusButton
             // 
@@ -93,7 +93,7 @@ namespace PAV___Calculator
             this.MinusButton.TabIndex = 2;
             this.MinusButton.Text = "-";
             this.MinusButton.UseVisualStyleBackColor = true;
-            this.MinusButton.Click += new System.EventHandler(this.MinusButton_Click);
+            this.MinusButton.Click += new System.EventHandler(this.OperatorButton_Click);
             // 
             // MultiplyButton
             // 
@@ -104,7 +104,7 @@ namespace PAV___Calculator
             this.MultiplyButton.TabIndex = 3;
             this.MultiplyButton.Text = "×";
             this.MultiplyButton.UseVisualStyleBackColor = true;
-            this.MultiplyButton.Click += new System.EventHandler(this.MultiplyButton_Click);
+            this.MultiplyButton.Click += new System.EventHandler(this.OperatorButton_Click);
             // 
             // DivideButton
             // 
@@ -115,7 +115,7 @@ namespace PAV___Calculator
             this.DivideButton.TabIndex = 4;
             this.DivideButton.Text = "÷";
             this.DivideButton.UseVisualStyleBackColor = true;
-            this.DivideButton.Click += new System.EventHandler(this.DivideButton_Click_1);
+            this.DivideButton.Click += new System.EventHandler(this.OperatorButton_Click);
             // 
             // DotButton
             // 
@@ -137,7 +137,7 @@ namespace PAV___Calculator
             this.OneButton.TabIndex = 6;
             this.OneButton.Text = "1";
             this.OneButton.UseVisualStyleBackColor = true;
-            this.OneButton.Click += new System.EventHandler(this.OneButton_Click);
+            this.OneButton.Click += new System.EventHandler(this.Numbutton_Click);
             // 
             // FourButton
             // 
@@ -148,7 +148,7 @@ namespace PAV___Calculator
             this.FourButton.TabIndex = 7;
             this.FourButton.Text = "4";
             this.FourButton.UseVisualStyleBackColor = true;
-            this.FourButton.Click += new System.EventHandler(this.FourButton_Click);
+            this.FourButton.Click += new System.EventHandler(this.Numbutton_Click);
             // 
             // SevenButton
             // 
@@ -159,7 +159,7 @@ namespace PAV___Calculator
             this.SevenButton.TabIndex = 8;
             this.SevenButton.Text = "7";
             this.SevenButton.UseVisualStyleBackColor = true;
-            this.SevenButton.Click += new System.EventHandler(this.SevenButton_Click);
+            this.SevenButton.Click += new System.EventHandler(this.Numbutton_Click);
             // 
             // SquarerootButton
             // 
@@ -181,7 +181,7 @@ namespace PAV___Calculator
             this.ZeroButton.TabIndex = 10;
             this.ZeroButton.Text = "0";
             this.ZeroButton.UseVisualStyleBackColor = true;
-            this.ZeroButton.Click += new System.EventHandler(this.ZeroButton_Click);
+            this.ZeroButton.Click += new System.EventHandler(this.Numbutton_Click);
             // 
             // TwoButton
             // 
@@ -192,7 +192,7 @@ namespace PAV___Calculator
             this.TwoButton.TabIndex = 11;
             this.TwoButton.Text = "2";
             this.TwoButton.UseVisualStyleBackColor = true;
-            this.TwoButton.Click += new System.EventHandler(this.TwoButton_Click);
+            this.TwoButton.Click += new System.EventHandler(this.Numbutton_Click);
             // 
             // FiveButton
             // 
@@ -203,7 +203,7 @@ namespace PAV___Calculator
             this.FiveButton.TabIndex = 12;
             this.FiveButton.Text = "5";
             this.FiveButton.UseVisualStyleBackColor = true;
-            this.FiveButton.Click += new System.EventHandler(this.FiveButton_Click);
+            this.FiveButton.Click += new System.EventHandler(this.Numbutton_Click);
             // 
             // EightButton
             // 
@@ -213,7 +213,7 @@ namespace PAV___Calculator
             this.EightButton.Size = new System.Drawing.Size(68, 43);
             this.EightButton.TabIndex = 13;
             this.EightButton.Text = "8";
-            this.EightButton.Click += new System.EventHandler(this.EightButton_Click);
+            this.EightButton.Click += new System.EventHandler(this.Numbutton_Click);
             // 
             // SquareButton
             // 
@@ -247,7 +247,7 @@ namespace PAV___Calculator
             this.ThreeButton.TabIndex = 16;
             this.ThreeButton.Text = "3";
             this.ThreeButton.UseVisualStyleBackColor = true;
-            this.ThreeButton.Click += new System.EventHandler(this.ThreeButton_Click);
+            this.ThreeButton.Click += new System.EventHandler(this.Numbutton_Click);
             // 
             // SixButton
             // 
@@ -258,7 +258,7 @@ namespace PAV___Calculator
             this.SixButton.TabIndex = 17;
             this.SixButton.Text = "6";
             this.SixButton.UseVisualStyleBackColor = true;
-            this.SixButton.Click += new System.EventHandler(this.SixButton_Click);
+            this.SixButton.Click += new System.EventHandler(this.Numbutton_Click);
             // 
             // NineButton
             // 
@@ -269,7 +269,7 @@ namespace PAV___Calculator
             this.NineButton.TabIndex = 18;
             this.NineButton.Text = "9";
             this.NineButton.UseVisualStyleBackColor = true;
-            this.NineButton.Click += new System.EventHandler(this.NineButton_Click);
+            this.NineButton.Click += new System.EventHandler(this.Numbutton_Click);
             // 
             // ReciprocalButton
             // 
@@ -298,6 +298,7 @@ namespace PAV___Calculator
             this.TotalDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TotalDisplay.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TotalDisplay.Location = new System.Drawing.Point(3, 3);
+            this.TotalDisplay.MaxLength = 12;
             this.TotalDisplay.Multiline = true;
             this.TotalDisplay.Name = "TotalDisplay";
             this.TotalDisplay.Size = new System.Drawing.Size(297, 46);

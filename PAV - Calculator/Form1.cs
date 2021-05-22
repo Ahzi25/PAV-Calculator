@@ -13,7 +13,7 @@ namespace PAV___Calculator
     public partial class Form1 : Form
     {
         public Form1()
-        {
+        { 
             InitializeComponent();
         }
 
@@ -26,18 +26,6 @@ namespace PAV___Calculator
             
         }
 
-        private void PlusButton_Click(object sender, EventArgs e)
-        {
-            TotalDisplay.Text += "+";
-        }
-
-        private void TwoButton_Click(object sender, EventArgs e)
-        {
-            if (TotalDisplay.Text == "0")
-                TotalDisplay.Clear();
-            TotalDisplay.Text += "2";
-        }
-
         private void DotButton_Click(object sender, EventArgs e)
         {
             if (TotalDisplay.Text == "0")
@@ -45,34 +33,10 @@ namespace PAV___Calculator
             TotalDisplay.Text += ".";
         }
 
-        private void MinusButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MultiplyButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void EraseButton_Click(object sender, EventArgs e)
         {
             if (TotalDisplay.Text != "")
                 TotalDisplay.Text = TotalDisplay.Text.Remove(TotalDisplay.Text.Length - 1);
-        }
-
-        private void SixButton_Click(object sender, EventArgs e)
-        {
-            if (TotalDisplay.Text == "0")
-                TotalDisplay.Clear();
-            TotalDisplay.Text += "6";
-        }
-
-        private void NineButton_Click(object sender, EventArgs e)
-        {
-            if (TotalDisplay.Text == "0")
-                TotalDisplay.Clear();
-            TotalDisplay.Text += "9";
         }
 
         private void SquarerootButton_Click(object sender, EventArgs e)
@@ -97,13 +61,6 @@ namespace PAV___Calculator
 
         }
 
-        private void EightButton_Click(object sender, EventArgs e)
-        {
-            if (TotalDisplay.Text == "0")
-                TotalDisplay.Clear();
-            TotalDisplay.Text += "8";
-        }
-
         private void PercentButton_Click(object sender, EventArgs e)
         {
             if (TotalDisplay.Text == "0")
@@ -111,37 +68,9 @@ namespace PAV___Calculator
             TotalDisplay.Text += "%";
         }
 
-        private void SevenButton_Click(object sender, EventArgs e)
-        {
-            if (TotalDisplay.Text == "0")
-                TotalDisplay.Clear();
-            TotalDisplay.Text += "7";
-        }
-
-        private void FourButton_Click(object sender, EventArgs e)
-        {
-            if (TotalDisplay.Text == "0")
-                TotalDisplay.Clear();
-            TotalDisplay.Text += "4";
-        }
-
         private void NegateButton_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void OneButton_Click(object sender, EventArgs e)
-        {
-            if (TotalDisplay.Text == "0")
-                TotalDisplay.Clear();
-            TotalDisplay.Text += "1";
-        }
-
-        private void ZeroButton_Click(object sender, EventArgs e)
-        {
-            if (TotalDisplay.Text == "0")
-                TotalDisplay.Clear();
-            TotalDisplay.Text += "0";
         }
 
         private void TotalDisplay_TextChanged(object sender, EventArgs e)
@@ -154,13 +83,6 @@ namespace PAV___Calculator
 
         }
 
-        private void ThreeButton_Click(object sender, EventArgs e)
-        {
-            if (TotalDisplay.Text == "0")
-                TotalDisplay.Clear();
-            TotalDisplay.Text += "3";
-        }
-
         private void ClearButton_Click(object sender, EventArgs e)
         {
             TotalDisplay.Text = "0";
@@ -168,21 +90,7 @@ namespace PAV___Calculator
 
         private void ClearentryButton_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void DivideButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void HistoryButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DivideButton_Click_1(object sender, EventArgs e)
-        {
+            TotalDisplay.Text = "0";
 
         }
 
@@ -194,6 +102,20 @@ namespace PAV___Calculator
         private void Table2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void OperatorButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Numbutton_Click(object sender, EventArgs e)
+        {
+            if (TotalDisplay.Text == "0")
+                TotalDisplay.Clear();
+
+            Button button = (Button)sender;
+            TotalDisplay.Text += button.Text;
         }
     }
 }
