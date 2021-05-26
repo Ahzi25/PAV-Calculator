@@ -12,12 +12,65 @@ namespace PAV_Tictactoe
 {
     public partial class Form1 : Form
     {
+        bool player_turn = true; // if true, player 1's turn; if false, player 2's turn
+        byte turn_count = 0; // variable to contain counter
         public Form1()
         {
             InitializeComponent();
         }
 
         private void TicTacButton_Click(object sender, EventArgs e)
+        {
+            Button tictacButton = (Button)sender;
+            if (player_turn) // if player turn = true
+            {
+                tictacButton.Text = "X";                                                                                                                                           
+            }
+            else // if player turn = false
+            {
+                tictacButton.Text = "O";
+            }
+           
+            player_turn = !player_turn; // player_turn value changer every click
+
+            tictacButton.Enabled = false; // locks the text value of button every click
+
+            winnerChecker();
+        }
+        private void winnerChecker()
+        {
+            bool gameSet = false;
+            
+            if ((button1.Text == button2.Text)&&(button2.Text == button3.Text) && (!button1.Enabled))
+                gameSet = true;
+            else if ((button1.Text == button5.Text) && (button5.Text == button9.Text) &&(!button1.Enabled))
+                gameSet = true;
+            else if ((button1.Text == button4.Text) && (button4.Text == button7.Text) && (!button1.Enabled))
+                gameSet = true;
+            else if ((button2.Text == button5.Text) && (button5.Text == button8.Text) && (!button2.Enabled))
+                gameSet = true; 
+            else if ((button4.Text == button5.Text) && (button5.Text == button6.Text) && (!button4.Enabled))
+                gameSet = true;
+            else if ((button3.Text == button6.Text) && (button6.Text == button9.Text) && (!button3.Enabled))
+                gameSet = true;
+            else if ((button7.Text == button8.Text) && (button8.Text == button9.Text)&& (!button7.Enabled))
+                gameSet = true;
+            else if ((button3.Text == button5.Text) && (button5.Text == button7.Text) && (!button3.Enabled))
+                gameSet = true;
+
+            if (gameSet) 
+            {
+                string winner = "";
+                if (player_turn)
+                    winner = "Player 2";
+                else
+                    winner = "Player 1";
+                
+                MessageBox.Show(winner + " " + "wins");
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)                                                                                                                                          
         {
 
         }
