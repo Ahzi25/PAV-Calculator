@@ -35,9 +35,10 @@ namespace PAV_Tictactoe
 
             tictacButton.Enabled = false; // locks the text value of button every click
 
-            winnerChecker();
+            turn_count += 1;
+            WinnerChecker();
         }
-        private void winnerChecker()
+        private void WinnerChecker() // checks if there is a winner
         {
             bool gameSet = false;
             
@@ -58,17 +59,49 @@ namespace PAV_Tictactoe
             else if ((button3.Text == button5.Text) && (button5.Text == button7.Text) && (!button3.Enabled))
                 gameSet = true;
 
-            if (gameSet) 
+            if (gameSet)
             {
+                ButtonsDisable();
                 string winner = "";
                 if (player_turn)
-                    winner = "Player 2";
+                    winner += "Player 2";
                 else
-                    winner = "Player 1";
-                
-                MessageBox.Show(winner + " " + "wins");
+                    winner += "Player 1";
+                string title = "Tic-tac-toe";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(winner + " " + "wins" + " " + "Play again?", title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    Application.Restart();
+                }
+                else
+                    this.Close();
             }
+            else if (turn_count == 9) // if there is no winner until last button
+            {
+                string title = "Tic-tac-toe";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show( "Draw. Play again?", title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    Application.Restart();
+                }
+                else
+                    this.Close();
+            }
+            
         }
+        private void ButtonsDisable() // prevents win evaluation every turn
+        {
+            try {
+                foreach (Control c in Controls)
+                {
+                    Button tictacButton = (Button)c;
+                    tictacButton.Enabled = false;
+                }
+            }
+            catch { }
+        } 
 
         private void Form1_Load(object sender, EventArgs e)                                                                                                                                          
         {
