@@ -40,6 +40,9 @@ namespace PAV_Tictactoe
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.OneScore = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TwoScore = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +50,7 @@ namespace PAV_Tictactoe
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(103, 13);
+            this.label1.Location = new System.Drawing.Point(131, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 25);
             this.label1.TabIndex = 1;
@@ -69,21 +72,21 @@ namespace PAV_Tictactoe
             this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 64);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 97);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(392, 316);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(346, 283);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // button9
             // 
             this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.Location = new System.Drawing.Point(263, 213);
+            this.button9.Location = new System.Drawing.Point(233, 191);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(126, 100);
+            this.button9.Size = new System.Drawing.Size(110, 89);
             this.button9.TabIndex = 8;
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.TicTacButton_Click);
@@ -91,9 +94,9 @@ namespace PAV_Tictactoe
             // button8
             // 
             this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button8.Location = new System.Drawing.Point(133, 213);
+            this.button8.Location = new System.Drawing.Point(118, 191);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(124, 100);
+            this.button8.Size = new System.Drawing.Size(109, 89);
             this.button8.TabIndex = 7;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.TicTacButton_Click);
@@ -101,9 +104,9 @@ namespace PAV_Tictactoe
             // button7
             // 
             this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.Location = new System.Drawing.Point(3, 213);
+            this.button7.Location = new System.Drawing.Point(3, 191);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(124, 100);
+            this.button7.Size = new System.Drawing.Size(109, 89);
             this.button7.TabIndex = 6;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.TicTacButton_Click);
@@ -111,9 +114,9 @@ namespace PAV_Tictactoe
             // button6
             // 
             this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Location = new System.Drawing.Point(263, 108);
+            this.button6.Location = new System.Drawing.Point(233, 97);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(126, 99);
+            this.button6.Size = new System.Drawing.Size(110, 88);
             this.button6.TabIndex = 5;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.TicTacButton_Click);
@@ -121,9 +124,9 @@ namespace PAV_Tictactoe
             // button5
             // 
             this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Location = new System.Drawing.Point(133, 108);
+            this.button5.Location = new System.Drawing.Point(118, 97);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(124, 99);
+            this.button5.Size = new System.Drawing.Size(109, 88);
             this.button5.TabIndex = 4;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.TicTacButton_Click);
@@ -131,9 +134,9 @@ namespace PAV_Tictactoe
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(3, 108);
+            this.button4.Location = new System.Drawing.Point(3, 97);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(124, 99);
+            this.button4.Size = new System.Drawing.Size(109, 88);
             this.button4.TabIndex = 3;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.TicTacButton_Click);
@@ -141,9 +144,9 @@ namespace PAV_Tictactoe
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(263, 3);
+            this.button3.Location = new System.Drawing.Point(233, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 99);
+            this.button3.Size = new System.Drawing.Size(110, 88);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.TicTacButton_Click);
@@ -151,9 +154,9 @@ namespace PAV_Tictactoe
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(133, 3);
+            this.button2.Location = new System.Drawing.Point(118, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 99);
+            this.button2.Size = new System.Drawing.Size(109, 88);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.TicTacButton_Click);
@@ -163,18 +166,48 @@ namespace PAV_Tictactoe
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 99);
+            this.button1.Size = new System.Drawing.Size(109, 88);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.TicTacButton_Click);
+            // 
+            // OneScore
+            // 
+            this.OneScore.Location = new System.Drawing.Point(7, 31);
+            this.OneScore.Name = "OneScore";
+            this.OneScore.Size = new System.Drawing.Size(105, 27);
+            this.OneScore.TabIndex = 3;
+            this.OneScore.Text = "Player one: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Score";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TwoScore
+            // 
+            this.TwoScore.Location = new System.Drawing.Point(7, 64);
+            this.TwoScore.Name = "TwoScore";
+            this.TwoScore.Size = new System.Drawing.Size(105, 27);
+            this.TwoScore.TabIndex = 5;
+            this.TwoScore.Text = "Player two: ";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 380);
+            this.ClientSize = new System.Drawing.Size(346, 380);
+            this.Controls.Add(this.TwoScore);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.OneScore);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Tic-tac-toe";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -196,6 +229,9 @@ namespace PAV_Tictactoe
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox OneScore;
+        private System.Windows.Forms.TextBox TwoScore;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -13,10 +13,16 @@ namespace PAV_Tictactoe
     public partial class Form1 : Form
     {
         bool player_turn = true; // if true, player 1's turn; if false, player 2's turn
-        byte turn_count = 0; // variable to contain counter
+        int turn_count = 0; // variable to contain counter
+        int scoreTwo = 0;
+        int scoreOne = 0;
         public Form1()
         {
             InitializeComponent();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void TicTacButton_Click(object sender, EventArgs e)
@@ -64,15 +70,24 @@ namespace PAV_Tictactoe
                 ButtonsDisable();
                 string winner = "";
                 if (player_turn)
+                {
                     winner += "Player 2";
+                    scoreTwo += 1;
+                    TwoScore.Text = "Player two: " + scoreTwo;
+                }
                 else
+                {
                     winner += "Player 1";
+                    scoreOne += 1;
+                    OneScore.Text = "Player one: " + scoreOne; 
+                }
+
                 string title = "Tic-tac-toe";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result = MessageBox.Show(winner + " " + "wins" + " " + "Play again?", title, buttons);
                 if (result == DialogResult.Yes)
                 {
-                    Application.Restart();
+                    GameReset();
                 }
                 else
                     this.Close();
@@ -84,13 +99,29 @@ namespace PAV_Tictactoe
                 DialogResult result = MessageBox.Show( "Draw. Play again?", title, buttons);
                 if (result == DialogResult.Yes)
                 {
-                    Application.Restart();
+                    GameReset();
                 }
                 else
                     this.Close();
             }
             
         }
+        private void GameReset()
+        {
+            turn_count = 0;
+            player_turn = true;
+            try
+            {
+                foreach (Control c in Controls)
+                {
+                    Button tictacButton = (Button)c;
+                    tictacButton.Enabled = true;
+                    tictacButton.Text = "";
+                }
+            }
+            catch { }
+        }
+
         private void ButtonsDisable() // prevents win evaluation every turn
         {
             try {
@@ -101,11 +132,6 @@ namespace PAV_Tictactoe
                 }
             }
             catch { }
-        } 
-
-        private void Form1_Load(object sender, EventArgs e)                                                                                                                                          
-        {
-
         }
     }
 }
