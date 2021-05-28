@@ -30,11 +30,13 @@ namespace PAV_Tictactoe
             Button tictacButton = (Button)sender;
             if (player_turn) // if player turn = true
             {
-                tictacButton.Text = "X";                                                                                                                                           
+                tictacButton.Text = "X";
+                playerTurn.Text = "Player two's turn";
             }
             else // if player turn = false
             {
                 tictacButton.Text = "O";
+                playerTurn.Text = "Player one's turn";
             }
            
             player_turn = !player_turn; // player_turn value changer every click
@@ -132,6 +134,11 @@ namespace PAV_Tictactoe
                 }
             }
             catch { }
+        }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }
