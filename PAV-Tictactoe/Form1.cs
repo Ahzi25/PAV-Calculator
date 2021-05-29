@@ -27,49 +27,51 @@ namespace PAV_Tictactoe
 
         private void TicTacButton_Click(object sender, EventArgs e)
         {
-            Button tictacButton = (Button)sender;
+            Button b = (Button)sender;
             if (player_turn) // if player turn = true
             {
-                tictacButton.Text = "X";
-                playerTurn.Text = "Player two's turn";
+                b.Text = "X";
+                playerTurn.Text = "Player one's turn";
             }
             else // if player turn = false
             {
-                tictacButton.Text = "O";
+                b.Text = "O";
                 playerTurn.Text = "Player one's turn";
             }
            
-            player_turn = !player_turn; // player_turn value changer every click
-
-            tictacButton.Enabled = false; // locks the text value of button every click
+            player_turn = !player_turn;
+            b.Enabled = false; 
 
             turn_count += 1;
+            
             WinnerChecker();
         }
         private void WinnerChecker() // checks if there is a winner
         {
             bool gameSet = false;
             
-            if ((button1.Text == button2.Text)&&(button2.Text == button3.Text) && (!button1.Enabled))
+            if ((button_R1C1.Text == button_R1C2.Text)&&(button_R1C2.Text == button_R1C3.Text) && (!button_R1C1.Enabled))
                 gameSet = true;
-            else if ((button1.Text == button5.Text) && (button5.Text == button9.Text) &&(!button1.Enabled))
+            else if ((button_R1C1.Text == button_R2C2.Text) && (button_R2C2.Text == button_R3C3.Text) &&(!button_R1C1.Enabled))
                 gameSet = true;
-            else if ((button1.Text == button4.Text) && (button4.Text == button7.Text) && (!button1.Enabled))
+            else if ((button_R1C1.Text == button_R2C1.Text) && (button_R2C1.Text == button_R3C1.Text) && (!button_R1C1.Enabled))
                 gameSet = true;
-            else if ((button2.Text == button5.Text) && (button5.Text == button8.Text) && (!button2.Enabled))
+            else if ((button_R1C2.Text == button_R2C2.Text) && (button_R2C2.Text == button_R3C2.Text) && (!button_R1C2.Enabled))
                 gameSet = true; 
-            else if ((button4.Text == button5.Text) && (button5.Text == button6.Text) && (!button4.Enabled))
+            else if ((button_R2C1.Text == button_R2C2.Text) && (button_R2C2.Text == button_R2C3.Text) && (!button_R2C1.Enabled))
                 gameSet = true;
-            else if ((button3.Text == button6.Text) && (button6.Text == button9.Text) && (!button3.Enabled))
+            else if ((button_R1C3.Text == button_R2C3.Text) && (button_R2C3.Text == button_R3C3.Text) && (!button_R1C3.Enabled))
                 gameSet = true;
-            else if ((button7.Text == button8.Text) && (button8.Text == button9.Text)&& (!button7.Enabled))
+            else if ((button_R3C1.Text == button_R3C2.Text) && (button_R3C2.Text == button_R3C3.Text)&& (!button_R3C1.Enabled))
                 gameSet = true;
-            else if ((button3.Text == button5.Text) && (button5.Text == button7.Text) && (!button3.Enabled))
+            else if ((button_R1C3.Text == button_R2C2.Text) && (button_R2C2.Text == button_R3C1.Text) && (!button_R1C3.Enabled))
                 gameSet = true;
-
+            
+            
+           
             if (gameSet)
             {
-                ButtonsDisable();
+                
                 string winner = "";
                 if (player_turn)
                 {
@@ -86,10 +88,10 @@ namespace PAV_Tictactoe
 
                 string title = "Tic-tac-toe";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result = MessageBox.Show(winner + " " + "wins" + " " + "Play again?", title, buttons);
+                DialogResult result = MessageBox.Show(winner + " " + "wins." + " " + "Play again?", title, buttons);
                 if (result == DialogResult.Yes)
                 {
-                    GameReset();
+                    PlayAgain();
                 }
                 else
                     this.Close();
@@ -101,44 +103,51 @@ namespace PAV_Tictactoe
                 DialogResult result = MessageBox.Show( "Draw. Play again?", title, buttons);
                 if (result == DialogResult.Yes)
                 {
-                    GameReset();
+                    PlayAgain();
                 }
                 else
                     this.Close();
             }
             
         }
-        private void GameReset()
-        {
-            turn_count = 0;
-            player_turn = true;
-            try
-            {
-                foreach (Control c in Controls)
-                {
-                    Button tictacButton = (Button)c;
-                    tictacButton.Enabled = true;
-                    tictacButton.Text = "";
-                }
-            }
-            catch { }
-        }
 
-        private void ButtonsDisable() // prevents win evaluation every turn
+        private void PlayAgain() 
         {
-            try {
-                foreach (Control c in Controls)
+            foreach(var Control in Controls)    
+            {
+                if (Control is Button b)
                 {
-                    Button tictacButton = (Button)c;
-                    tictacButton.Enabled = false;
+                    if (b.Name.StartsWith("button_R"))
+                    {
+                        b.Enabled = true;
+                        b.Text = "";
+                    }
                 }
             }
-            catch { }
+            
+            
         }
 
         private void Reset_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            scoreOne = 0;
+            scoreTwo = 0;
+            OneScore.Text = "Player one: " + scoreTwo;
+            TwoScore.Text = "Player two: " + scoreTwo;
+            
+            foreach (var Control in Controls)
+            {
+                if (Control is Button b)
+                {
+                    if (b.Name.StartsWith("button_R"))
+                    {
+                        b.Enabled = true;
+                        b.Text = "";
+                    }
+                }
+            }
+
         }
+
     }
 }
