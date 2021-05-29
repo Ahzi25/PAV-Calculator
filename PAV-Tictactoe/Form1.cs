@@ -22,7 +22,7 @@ namespace PAV_Tictactoe
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void TicTacButton_Click(object sender, EventArgs e)
@@ -75,13 +75,13 @@ namespace PAV_Tictactoe
                 string winner = "";
                 if (player_turn)
                 {
-                    winner += "Player 2";
+                    winner += "Player two";
                     scoreTwo += 1;
                     TwoScore.Text = "Player two: " + scoreTwo;
                 }
                 else
                 {
-                    winner += "Player 1";
+                    winner += "Player one";
                     scoreOne += 1;
                     OneScore.Text = "Player one: " + scoreOne; 
                 }
@@ -94,7 +94,10 @@ namespace PAV_Tictactoe
                     PlayAgain();
                 }
                 else
-                    this.Close();
+                {
+
+                }
+                    
             }
             else if (turn_count == 9) // if there is no winner until last button
             {
@@ -106,22 +109,26 @@ namespace PAV_Tictactoe
                     PlayAgain();
                 }
                 else
-                    this.Close();
+                {
+
+                }
+                    
             }
             
         }
 
         private void PlayAgain() 
         {
-            foreach(var Control in Controls)    
+
+            foreach(var Control in this.tableLayoutPanel1.Controls)    
             {
+                turn_count = 0;
+                player_turn = true;
+
                 if (Control is Button b)
                 {
-                    if (b.Name.StartsWith("button_R"))
-                    {
-                        b.Enabled = true;
-                        b.Text = "";
-                    }
+                    b.Enabled = true;
+                    b.Text = "";
                 }
             }
             
@@ -135,7 +142,7 @@ namespace PAV_Tictactoe
             OneScore.Text = "Player one: " + scoreTwo;
             TwoScore.Text = "Player two: " + scoreTwo;
             
-            foreach (var Control in Controls)
+            foreach (var Control in this.tableLayoutPanel1.Controls)
             {
                 if (Control is Button b)
                 {
@@ -148,6 +155,5 @@ namespace PAV_Tictactoe
             }
 
         }
-
     }
 }

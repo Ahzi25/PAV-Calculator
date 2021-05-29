@@ -30,21 +30,21 @@ namespace PAV_Tictactoe
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_R3C3 = new System.Windows.Forms.Button();
-            this.button_R3C2 = new System.Windows.Forms.Button();
-            this.button_R3C1 = new System.Windows.Forms.Button();
-            this.button_R2C3 = new System.Windows.Forms.Button();
-            this.button_R2C2 = new System.Windows.Forms.Button();
-            this.button_R2C1 = new System.Windows.Forms.Button();
-            this.button_R1C3 = new System.Windows.Forms.Button();
-            this.button_R1C2 = new System.Windows.Forms.Button();
-            this.button_R1C1 = new System.Windows.Forms.Button();
             this.OneScore = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TwoScore = new System.Windows.Forms.TextBox();
             this.playerTurn = new System.Windows.Forms.TextBox();
             this.Reset = new System.Windows.Forms.Button();
+            this.button_R1C2 = new System.Windows.Forms.Button();
+            this.button_R1C3 = new System.Windows.Forms.Button();
+            this.button_R2C1 = new System.Windows.Forms.Button();
+            this.button_R2C2 = new System.Windows.Forms.Button();
+            this.button_R2C3 = new System.Windows.Forms.Button();
+            this.button_R3C1 = new System.Windows.Forms.Button();
+            this.button_R3C2 = new System.Windows.Forms.Button();
+            this.button_R3C3 = new System.Windows.Forms.Button();
+            this.button_R1C1 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,122 +57,6 @@ namespace PAV_Tictactoe
             this.label1.Size = new System.Drawing.Size(180, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tic-Tac-Toe Game";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.button_R3C3, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button_R3C2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button_R3C1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button_R2C3, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button_R2C2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button_R2C1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button_R1C3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button_R1C2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button_R1C1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 102);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(346, 278);
-            this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // button_R3C3
-            // 
-            this.button_R3C3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_R3C3.Location = new System.Drawing.Point(233, 187);
-            this.button_R3C3.Name = "button_R3C3";
-            this.button_R3C3.Size = new System.Drawing.Size(110, 88);
-            this.button_R3C3.TabIndex = 8;
-            this.button_R3C3.Text = "jj";
-            this.button_R3C3.UseVisualStyleBackColor = true;
-            this.button_R3C3.Click += new System.EventHandler(this.TicTacButton_Click);
-            // 
-            // button_R3C2
-            // 
-            this.button_R3C2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_R3C2.Location = new System.Drawing.Point(118, 187);
-            this.button_R3C2.Name = "button_R3C2";
-            this.button_R3C2.Size = new System.Drawing.Size(109, 88);
-            this.button_R3C2.TabIndex = 7;
-            this.button_R3C2.UseVisualStyleBackColor = true;
-            this.button_R3C2.Click += new System.EventHandler(this.TicTacButton_Click);
-            // 
-            // button_R3C1
-            // 
-            this.button_R3C1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_R3C1.Location = new System.Drawing.Point(3, 187);
-            this.button_R3C1.Name = "button_R3C1";
-            this.button_R3C1.Size = new System.Drawing.Size(109, 88);
-            this.button_R3C1.TabIndex = 6;
-            this.button_R3C1.UseVisualStyleBackColor = true;
-            this.button_R3C1.Click += new System.EventHandler(this.TicTacButton_Click);
-            // 
-            // button_R2C3
-            // 
-            this.button_R2C3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_R2C3.Location = new System.Drawing.Point(233, 95);
-            this.button_R2C3.Name = "button_R2C3";
-            this.button_R2C3.Size = new System.Drawing.Size(110, 86);
-            this.button_R2C3.TabIndex = 5;
-            this.button_R2C3.UseVisualStyleBackColor = true;
-            this.button_R2C3.Click += new System.EventHandler(this.TicTacButton_Click);
-            // 
-            // button_R2C2
-            // 
-            this.button_R2C2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_R2C2.Location = new System.Drawing.Point(118, 95);
-            this.button_R2C2.Name = "button_R2C2";
-            this.button_R2C2.Size = new System.Drawing.Size(109, 86);
-            this.button_R2C2.TabIndex = 4;
-            this.button_R2C2.UseVisualStyleBackColor = true;
-            this.button_R2C2.Click += new System.EventHandler(this.TicTacButton_Click);
-            // 
-            // button_R2C1
-            // 
-            this.button_R2C1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_R2C1.Location = new System.Drawing.Point(3, 95);
-            this.button_R2C1.Name = "button_R2C1";
-            this.button_R2C1.Size = new System.Drawing.Size(109, 86);
-            this.button_R2C1.TabIndex = 3;
-            this.button_R2C1.UseVisualStyleBackColor = true;
-            this.button_R2C1.Click += new System.EventHandler(this.TicTacButton_Click);
-            // 
-            // button_R1C3
-            // 
-            this.button_R1C3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_R1C3.Location = new System.Drawing.Point(233, 3);
-            this.button_R1C3.Name = "button_R1C3";
-            this.button_R1C3.Size = new System.Drawing.Size(110, 86);
-            this.button_R1C3.TabIndex = 2;
-            this.button_R1C3.UseVisualStyleBackColor = true;
-            this.button_R1C3.Click += new System.EventHandler(this.TicTacButton_Click);
-            // 
-            // button_R1C2
-            // 
-            this.button_R1C2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_R1C2.Location = new System.Drawing.Point(118, 3);
-            this.button_R1C2.Name = "button_R1C2";
-            this.button_R1C2.Size = new System.Drawing.Size(109, 86);
-            this.button_R1C2.TabIndex = 1;
-            this.button_R1C2.UseVisualStyleBackColor = true;
-            this.button_R1C2.Click += new System.EventHandler(this.TicTacButton_Click);
-            // 
-            // button_R1C1
-            // 
-            this.button_R1C1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_R1C1.Location = new System.Drawing.Point(3, 3);
-            this.button_R1C1.Name = "button_R1C1";
-            this.button_R1C1.Size = new System.Drawing.Size(109, 86);
-            this.button_R1C1.TabIndex = 0;
-            this.button_R1C1.UseVisualStyleBackColor = true;
-            this.button_R1C1.Click += new System.EventHandler(this.TicTacButton_Click);
             // 
             // OneScore
             // 
@@ -223,6 +107,122 @@ namespace PAV_Tictactoe
             this.Reset.UseVisualStyleBackColor = false;
             this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
+            // button_R1C2
+            // 
+            this.button_R1C2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_R1C2.Location = new System.Drawing.Point(118, 3);
+            this.button_R1C2.Name = "button_R1C2";
+            this.button_R1C2.Size = new System.Drawing.Size(109, 86);
+            this.button_R1C2.TabIndex = 1;
+            this.button_R1C2.UseVisualStyleBackColor = true;
+            this.button_R1C2.Click += new System.EventHandler(this.TicTacButton_Click);
+            // 
+            // button_R1C3
+            // 
+            this.button_R1C3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_R1C3.Location = new System.Drawing.Point(233, 3);
+            this.button_R1C3.Name = "button_R1C3";
+            this.button_R1C3.Size = new System.Drawing.Size(110, 86);
+            this.button_R1C3.TabIndex = 2;
+            this.button_R1C3.UseVisualStyleBackColor = true;
+            this.button_R1C3.Click += new System.EventHandler(this.TicTacButton_Click);
+            // 
+            // button_R2C1
+            // 
+            this.button_R2C1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_R2C1.Location = new System.Drawing.Point(3, 95);
+            this.button_R2C1.Name = "button_R2C1";
+            this.button_R2C1.Size = new System.Drawing.Size(109, 86);
+            this.button_R2C1.TabIndex = 3;
+            this.button_R2C1.UseVisualStyleBackColor = true;
+            this.button_R2C1.Click += new System.EventHandler(this.TicTacButton_Click);
+            // 
+            // button_R2C2
+            // 
+            this.button_R2C2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_R2C2.Location = new System.Drawing.Point(118, 95);
+            this.button_R2C2.Name = "button_R2C2";
+            this.button_R2C2.Size = new System.Drawing.Size(109, 86);
+            this.button_R2C2.TabIndex = 4;
+            this.button_R2C2.UseVisualStyleBackColor = true;
+            this.button_R2C2.Click += new System.EventHandler(this.TicTacButton_Click);
+            // 
+            // button_R2C3
+            // 
+            this.button_R2C3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_R2C3.Location = new System.Drawing.Point(233, 95);
+            this.button_R2C3.Name = "button_R2C3";
+            this.button_R2C3.Size = new System.Drawing.Size(110, 86);
+            this.button_R2C3.TabIndex = 5;
+            this.button_R2C3.UseVisualStyleBackColor = true;
+            this.button_R2C3.Click += new System.EventHandler(this.TicTacButton_Click);
+            // 
+            // button_R3C1
+            // 
+            this.button_R3C1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_R3C1.Location = new System.Drawing.Point(3, 187);
+            this.button_R3C1.Name = "button_R3C1";
+            this.button_R3C1.Size = new System.Drawing.Size(109, 88);
+            this.button_R3C1.TabIndex = 6;
+            this.button_R3C1.UseVisualStyleBackColor = true;
+            this.button_R3C1.Click += new System.EventHandler(this.TicTacButton_Click);
+            // 
+            // button_R3C2
+            // 
+            this.button_R3C2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_R3C2.Location = new System.Drawing.Point(118, 187);
+            this.button_R3C2.Name = "button_R3C2";
+            this.button_R3C2.Size = new System.Drawing.Size(109, 88);
+            this.button_R3C2.TabIndex = 7;
+            this.button_R3C2.UseVisualStyleBackColor = true;
+            this.button_R3C2.Click += new System.EventHandler(this.TicTacButton_Click);
+            // 
+            // button_R3C3
+            // 
+            this.button_R3C3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_R3C3.Location = new System.Drawing.Point(233, 187);
+            this.button_R3C3.Name = "button_R3C3";
+            this.button_R3C3.Size = new System.Drawing.Size(110, 88);
+            this.button_R3C3.TabIndex = 8;
+            this.button_R3C3.UseVisualStyleBackColor = true;
+            this.button_R3C3.Click += new System.EventHandler(this.TicTacButton_Click);
+            // 
+            // button_R1C1
+            // 
+            this.button_R1C1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_R1C1.Location = new System.Drawing.Point(3, 3);
+            this.button_R1C1.Name = "button_R1C1";
+            this.button_R1C1.Size = new System.Drawing.Size(109, 86);
+            this.button_R1C1.TabIndex = 8;
+            this.button_R1C1.TabStop = false;
+            this.button_R1C1.UseVisualStyleBackColor = true;
+            this.button_R1C1.Click += new System.EventHandler(this.TicTacButton_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.button_R1C1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button_R3C3, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.button_R3C2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.button_R3C1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.button_R2C3, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button_R2C2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button_R2C1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button_R1C3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button_R1C2, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 102);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(346, 278);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -237,6 +237,7 @@ namespace PAV_Tictactoe
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Tic-tac-toe";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -247,21 +248,21 @@ namespace PAV_Tictactoe
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button_R1C1;
-        private System.Windows.Forms.Button button_R3C3;
-        private System.Windows.Forms.Button button_R3C2;
-        private System.Windows.Forms.Button button_R3C1;
-        private System.Windows.Forms.Button button_R2C3;
-        private System.Windows.Forms.Button button_R2C2;
-        private System.Windows.Forms.Button button_R2C1;
-        private System.Windows.Forms.Button button_R1C3;
-        private System.Windows.Forms.Button button_R1C2;
         private System.Windows.Forms.TextBox OneScore;
         private System.Windows.Forms.TextBox TwoScore;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox playerTurn;
         private System.Windows.Forms.Button Reset;
+        private System.Windows.Forms.Button button_R1C2;
+        private System.Windows.Forms.Button button_R1C3;
+        private System.Windows.Forms.Button button_R2C1;
+        private System.Windows.Forms.Button button_R2C2;
+        private System.Windows.Forms.Button button_R2C3;
+        private System.Windows.Forms.Button button_R3C1;
+        private System.Windows.Forms.Button button_R3C2;
+        private System.Windows.Forms.Button button_R3C3;
+        private System.Windows.Forms.Button button_R1C1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 
