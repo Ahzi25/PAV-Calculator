@@ -66,11 +66,12 @@ namespace PAV___Calculator
             // 
             this.StandardLabel.AutoSize = true;
             this.StandardLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.StandardLabel.Location = new System.Drawing.Point(0, 8);
+            this.StandardLabel.Location = new System.Drawing.Point(1, 17);
             this.StandardLabel.Name = "StandardLabel";
             this.StandardLabel.Size = new System.Drawing.Size(108, 32);
             this.StandardLabel.TabIndex = 21;
             this.StandardLabel.Text = "Standard";
+            this.StandardLabel.Click += new System.EventHandler(this.StandardLabel_Click_1);
             // 
             // prevOperation
             // 

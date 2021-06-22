@@ -35,11 +35,8 @@ namespace PAV___Calculator
             showprevoperation = false;
             Button button = (Button)sender;
             TotalDisplay.Text += button.Text;
+            sec_num = button.Text;
             
-            if (resVal != 0)
-            {
-                sec_num = button.Text;
-            }
         }
 
         private void DotButton_Click(object sender, EventArgs e)
@@ -125,12 +122,15 @@ namespace PAV___Calculator
                     break;
                 case "-":
                     TotalDisplay.Text = (resVal - Double.Parse(TotalDisplay.Text)).ToString();
+                    prevOperation.Text = resVal + " " + "-" + " " + sec_num + " " + "=";
                     break;
-                case "*":
+                case "×":
                     TotalDisplay.Text = (resVal * Double.Parse(TotalDisplay.Text)).ToString();
+                    prevOperation.Text = resVal + " " + "×" + " " +sec_num + " " + "=";
                     break;
-                case "/":
+                case "÷":
                     TotalDisplay.Text = (resVal / Double.Parse(TotalDisplay.Text)).ToString();
+                    prevOperation.Text = resVal + " " + "÷" + " " + sec_num + " " + "=";
                     break;
                 default:
                     break;
@@ -147,5 +147,9 @@ namespace PAV___Calculator
 
         }
 
+        private void StandardLabel_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
