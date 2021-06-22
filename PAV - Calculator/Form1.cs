@@ -54,7 +54,8 @@ namespace PAV___Calculator
 
         private void SquarerootButton_Click(object sender, EventArgs e)
         {
-            
+            prevOperation.Text = "sqrt(" + TotalDisplay.Text + ")";
+            TotalDisplay.Text = (Math.Sqrt(Double.Parse(TotalDisplay.Text))).ToString();
         }
 
         private void ReciprocalButton_Click(object sender, EventArgs e)
@@ -64,9 +65,8 @@ namespace PAV___Calculator
 
         private void SquareButton_Click(object sender, EventArgs e)
         {
+            prevOperation.Text = "sqr(" + TotalDisplay.Text + ")";
             TotalDisplay.Text = (Double.Parse(TotalDisplay.Text) * Double.Parse(TotalDisplay.Text)).ToString();
-            String dispNum = Math.Sqrt(Double.Parse(TotalDisplay.Text)).ToString();
-            prevOperation.Text = "sqr(" + dispNum + ")";
         }
 
         private void PercentButton_Click(object sender, EventArgs e)
