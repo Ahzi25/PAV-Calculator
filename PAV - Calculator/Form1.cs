@@ -78,17 +78,12 @@ namespace PAV___Calculator
 
         private void NegateButton_Click(object sender, EventArgs e)
         {
-
+            TotalDisplay.Text = (0 - Double.Parse(TotalDisplay.Text)).ToString();
         }
 
         private void TotalDisplay_TextChanged(object sender, EventArgs e)
         {
             
-        }
-
-        private void StandardLabel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
