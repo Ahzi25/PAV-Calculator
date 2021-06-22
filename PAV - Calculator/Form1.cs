@@ -60,7 +60,7 @@ namespace PAV___Calculator
 
         private void ReciprocalButton_Click(object sender, EventArgs e)
         {
-
+            TotalDisplay.Text = (1 / Double.Parse(TotalDisplay.Text)).ToString();
         }
 
         private void SquareButton_Click(object sender, EventArgs e)
@@ -123,11 +123,12 @@ namespace PAV___Calculator
                     break;
                 case "×":
                     TotalDisplay.Text = (resVal * Double.Parse(TotalDisplay.Text)).ToString();
-                    prevOperation.Text = resVal + " " + "×" + " " +sec_num + " " + "=";
+                    first_num = (Double.Parse(TotalDisplay.Text) / Byte.Parse(sec_num)).ToString();
+                    prevOperation.Text = first_num + " " + "×" + " " +sec_num + " " + "=";
                     break;
                 case "÷":
                     TotalDisplay.Text = (resVal / Double.Parse(TotalDisplay.Text)).ToString();
-                    prevOperation.Text = resVal + " " + "÷" + " " + sec_num + " " + "=";
+                    prevOperation.Text = first_num + " " + "÷" + " " + sec_num + " " + "=";
                     break;
                 default:
                     break;
