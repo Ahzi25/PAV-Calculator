@@ -35,9 +35,9 @@ namespace PAV___Calculator
             this.EqualButton = new System.Windows.Forms.Button();
             this.PercentButton = new System.Windows.Forms.Button();
             this.DotButton = new System.Windows.Forms.Button();
-            this.ClearentryButton = new System.Windows.Forms.Button();
-            this.ZeroButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
+            this.ZeroButton = new System.Windows.Forms.Button();
+            this.ClearentryButton = new System.Windows.Forms.Button();
             this.NegateButton = new System.Windows.Forms.Button();
             this.EraseButton = new System.Windows.Forms.Button();
             this.PlusButton = new System.Windows.Forms.Button();
@@ -93,9 +93,9 @@ namespace PAV___Calculator
             this.Table2.Controls.Add(this.EqualButton, 3, 5);
             this.Table2.Controls.Add(this.PercentButton, 0, 0);
             this.Table2.Controls.Add(this.DotButton, 2, 5);
-            this.Table2.Controls.Add(this.ClearentryButton, 1, 0);
+            this.Table2.Controls.Add(this.ClearButton, 1, 0);
             this.Table2.Controls.Add(this.ZeroButton, 1, 5);
-            this.Table2.Controls.Add(this.ClearButton, 2, 0);
+            this.Table2.Controls.Add(this.ClearentryButton, 2, 0);
             this.Table2.Controls.Add(this.NegateButton, 0, 5);
             this.Table2.Controls.Add(this.EraseButton, 3, 0);
             this.Table2.Controls.Add(this.PlusButton, 3, 4);
@@ -159,18 +159,18 @@ namespace PAV___Calculator
             this.DotButton.TabIndex = 5;
             this.DotButton.Text = ".";
             this.DotButton.UseVisualStyleBackColor = true;
-            this.DotButton.Click += new System.EventHandler(this.DotButton_Click);
+            this.DotButton.Click += new System.EventHandler(this.Numbutton_Click);
             // 
-            // ClearentryButton
+            // ClearButton
             // 
-            this.ClearentryButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ClearentryButton.Location = new System.Drawing.Point(90, 3);
-            this.ClearentryButton.Name = "ClearentryButton";
-            this.ClearentryButton.Size = new System.Drawing.Size(81, 38);
-            this.ClearentryButton.TabIndex = 33;
-            this.ClearentryButton.Text = "CE";
-            this.ClearentryButton.UseVisualStyleBackColor = true;
-            this.ClearentryButton.Click += new System.EventHandler(this.ClearentryButton_Click);
+            this.ClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClearButton.Location = new System.Drawing.Point(90, 3);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(81, 38);
+            this.ClearButton.TabIndex = 33;
+            this.ClearButton.Text = "C";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // ZeroButton
             // 
@@ -183,16 +183,16 @@ namespace PAV___Calculator
             this.ZeroButton.UseVisualStyleBackColor = true;
             this.ZeroButton.Click += new System.EventHandler(this.Numbutton_Click);
             // 
-            // ClearButton
+            // ClearentryButton
             // 
-            this.ClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ClearButton.Location = new System.Drawing.Point(177, 3);
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(81, 38);
-            this.ClearButton.TabIndex = 32;
-            this.ClearButton.Text = "C";
-            this.ClearButton.UseVisualStyleBackColor = true;
-            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            this.ClearentryButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClearentryButton.Location = new System.Drawing.Point(177, 3);
+            this.ClearentryButton.Name = "ClearentryButton";
+            this.ClearentryButton.Size = new System.Drawing.Size(81, 38);
+            this.ClearentryButton.TabIndex = 32;
+            this.ClearentryButton.Text = "CE";
+            this.ClearentryButton.UseVisualStyleBackColor = true;
+            this.ClearentryButton.Click += new System.EventHandler(this.ClearentryButton_Click);
             // 
             // NegateButton
             // 
@@ -454,9 +454,9 @@ namespace PAV___Calculator
         private System.Windows.Forms.Button EqualButton;
         private System.Windows.Forms.Button PercentButton;
         private System.Windows.Forms.Button DotButton;
-        private System.Windows.Forms.Button ClearentryButton;
-        private System.Windows.Forms.Button ZeroButton;
         private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.Button ZeroButton;
+        private System.Windows.Forms.Button ClearentryButton;
         private System.Windows.Forms.Button NegateButton;
         private System.Windows.Forms.Button EraseButton;
         private System.Windows.Forms.Button PlusButton;

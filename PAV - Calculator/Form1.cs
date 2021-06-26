@@ -14,9 +14,8 @@ namespace PAV___Calculator
     {
         Double resVal = 0;
         String operand = "";
-        String first_num = "";
-        String sec_num = "";
         bool showprevoperation = false;
+        string first_num, second_num;
 
         public Form1()
         { 
@@ -29,29 +28,27 @@ namespace PAV___Calculator
         }
         private void Numbutton_Click(object sender, EventArgs e)
         {
+            Button button = (Button)sender;
+
             if ((TotalDisplay.Text == "0") || (showprevoperation))
                 TotalDisplay.Clear();
-
             showprevoperation = false;
-            Button button = (Button)sender;
-            TotalDisplay.Text += button.Text;
-            sec_num = button.Text;
-            
-        }
 
-        private void DotButton_Click(object sender, EventArgs e)
-        {
-            if (TotalDisplay.Text.Contains("."))
+            if(button.Text == ".")
             {
-
+                if (!TotalDisplay.Text.Contains("."))
+                    TotalDisplay.Text += button.Text;
             }
             else
             {
-                TotalDisplay.Text += ".";
+                TotalDisplay.Text += button.Text;
             }
-
+            
+            
+            
         }
 
+ 
         private void EraseButton_Click(object sender, EventArgs e)
         {
             if (TotalDisplay.Text != "")
@@ -87,11 +84,6 @@ namespace PAV___Calculator
             TotalDisplay.Text = (0 - Double.Parse(TotalDisplay.Text)).ToString();
         }
 
-        private void TotalDisplay_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void ClearButton_Click(object sender, EventArgs e)
         {
             TotalDisplay.Text = "0";
@@ -107,49 +99,58 @@ namespace PAV___Calculator
 
         private void OperatorButton_Click(object sender, EventArgs e)
         {
-            try
+            Button op = (Button)sender;
+
+            if (resVal != 0)
             {
-                Button op = (Button)sender;
+                EqualButton.PerformClick();
+                showprevoperation = true;
+                operand = op.Text;
+                prevOperation.Text = resVal + " " + operand;
+            }
+
+            else
+            {
                 operand = op.Text;
                 resVal = Double.Parse(TotalDisplay.Text);
-                prevOperation.Text = resVal + " " + operand;
                 showprevoperation = true;
-                TotalDisplay.Text = "0";
-
+                prevOperation.Text = resVal + " " + operand;
             }
-            catch { }
+            first_num = prevOperation.Text;
         }
 
         private void EqualButton_Click(object sender, EventArgs e)
         {
-            try
+            switch (operand)
             {
-                switch (operand)
-                {
-                    case "+":
+                case "+":
+                    {
                         TotalDisplay.Text = (resVal + Double.Parse(TotalDisplay.Text)).ToString();
-                        first_num = (Double.Parse(TotalDisplay.Text) - Byte.Parse(sec_num)).ToString();
-                        prevOperation.Text = first_num + " " + "+" + " " + sec_num + " " + "=";
+                        second_num = (Double.Parse(TotalDisplay.Text) - resVal).ToString();
+                        prevOperation.Text = first_num + " " + second_num + " " + "=";
                         break;
-                    case "-":
-                        TotalDisplay.Text = (resVal - Double.Parse(TotalDisplay.Text)).ToString();
-                        prevOperation.Text = resVal + " " + "-" + " " + sec_num + " " + "=";
-                        break;
-                    case "×":
-                        TotalDisplay.Text = (resVal * Double.Parse(TotalDisplay.Text)).ToString();
-                        first_num = (Double.Parse(TotalDisplay.Text) / Byte.Parse(sec_num)).ToString();
-                        prevOperation.Text = first_num + " " + "×" + " " + sec_num + " " + "=";
-                        break;
-                    case "÷":
-                        TotalDisplay.Text = (resVal / Double.Parse(TotalDisplay.Text)).ToString();
-                        first_num = (Double.Parse(TotalDisplay.Text) * Byte.Parse(sec_num)).ToString();
-                        prevOperation.Text = first_num + " " + "÷" + " " + sec_num + " " + "=";
-                        break;
-                    default:
-                        break;
-                }
+                    }
+                case "-":
+                    TotalDisplay.Text = (resVal - Double.Parse(TotalDisplay.Text)).ToString();
+                    second_num = ((Double.Parse(TotalDisplay.Text) - resVal)*-1).ToString();
+                    prevOperation.Text = first_num + " " + second_num + " " + "=";
+                    break;
+                case "×":
+                    TotalDisplay.Text = (resVal * Double.Parse(TotalDisplay.Text)).ToString();
+                    second_num = (Double.Parse(TotalDisplay.Text) / resVal).ToString();
+                    prevOperation.Text = first_num + " " + second_num + " " + "=";
+                    break;
+                case "÷":
+                    TotalDisplay.Text = (resVal / Double.Parse(TotalDisplay.Text)).ToString();
+                    second_num = (resVal / Double.Parse(TotalDisplay.Text)).ToString();
+                    prevOperation.Text = first_num + " " + second_num + " " + "=";
+                    break;
+                default:
+                    break;
             }
-            catch { }
+            resVal = Double.Parse(TotalDisplay.Text);
+            operand = "";
+            
         }
 
         private void Table1_Paint(object sender, PaintEventArgs e)
@@ -163,6 +164,11 @@ namespace PAV___Calculator
         }
 
         private void StandardLabel_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TotalDisplay_TextChanged(object sender, EventArgs e)
         {
 
         }
