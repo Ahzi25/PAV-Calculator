@@ -41,9 +41,15 @@ namespace PAV___Calculator
 
         private void DotButton_Click(object sender, EventArgs e)
         {
-            if (TotalDisplay.Text == "0")
-                TotalDisplay.Clear();
-            TotalDisplay.Text += ".";
+            if (TotalDisplay.Text.Contains("."))
+            {
+
+            }
+            else
+            {
+                TotalDisplay.Text += ".";
+            }
+
         }
 
         private void EraseButton_Click(object sender, EventArgs e)
@@ -101,38 +107,49 @@ namespace PAV___Calculator
 
         private void OperatorButton_Click(object sender, EventArgs e)
         {
-            Button op = (Button)sender;
-            operand = op.Text;
-            resVal = Double.Parse(TotalDisplay.Text);
-            prevOperation.Text = resVal + " " + operand;
-            showprevoperation = true;   
+            try
+            {
+                Button op = (Button)sender;
+                operand = op.Text;
+                resVal = Double.Parse(TotalDisplay.Text);
+                prevOperation.Text = resVal + " " + operand;
+                showprevoperation = true;
+                TotalDisplay.Text = "0";
+
+            }
+            catch { }
         }
 
         private void EqualButton_Click(object sender, EventArgs e)
         {
-            switch (operand)
+            try
             {
-                case "+":
-                    TotalDisplay.Text = (resVal + Double.Parse(TotalDisplay.Text)).ToString();
-                    first_num = (Double.Parse(TotalDisplay.Text) - Byte.Parse(sec_num)).ToString();
-                    prevOperation.Text = first_num + " " + "+" + " " + sec_num + " " + "=";
-                    break;
-                case "-":
-                    TotalDisplay.Text = (resVal - Double.Parse(TotalDisplay.Text)).ToString();
-                    prevOperation.Text = resVal + " " + "-" + " " + sec_num + " " + "=";
-                    break;
-                case "×":
-                    TotalDisplay.Text = (resVal * Double.Parse(TotalDisplay.Text)).ToString();
-                    first_num = (Double.Parse(TotalDisplay.Text) / Byte.Parse(sec_num)).ToString();
-                    prevOperation.Text = first_num + " " + "×" + " " +sec_num + " " + "=";
-                    break;
-                case "÷":
-                    TotalDisplay.Text = (resVal / Double.Parse(TotalDisplay.Text)).ToString();
-                    prevOperation.Text = first_num + " " + "÷" + " " + sec_num + " " + "=";
-                    break;
-                default:
-                    break;
+                switch (operand)
+                {
+                    case "+":
+                        TotalDisplay.Text = (resVal + Double.Parse(TotalDisplay.Text)).ToString();
+                        first_num = (Double.Parse(TotalDisplay.Text) - Byte.Parse(sec_num)).ToString();
+                        prevOperation.Text = first_num + " " + "+" + " " + sec_num + " " + "=";
+                        break;
+                    case "-":
+                        TotalDisplay.Text = (resVal - Double.Parse(TotalDisplay.Text)).ToString();
+                        prevOperation.Text = resVal + " " + "-" + " " + sec_num + " " + "=";
+                        break;
+                    case "×":
+                        TotalDisplay.Text = (resVal * Double.Parse(TotalDisplay.Text)).ToString();
+                        first_num = (Double.Parse(TotalDisplay.Text) / Byte.Parse(sec_num)).ToString();
+                        prevOperation.Text = first_num + " " + "×" + " " + sec_num + " " + "=";
+                        break;
+                    case "÷":
+                        TotalDisplay.Text = (resVal / Double.Parse(TotalDisplay.Text)).ToString();
+                        first_num = (Double.Parse(TotalDisplay.Text) * Byte.Parse(sec_num)).ToString();
+                        prevOperation.Text = first_num + " " + "÷" + " " + sec_num + " " + "=";
+                        break;
+                    default:
+                        break;
+                }
             }
+            catch { }
         }
 
         private void Table1_Paint(object sender, PaintEventArgs e)
