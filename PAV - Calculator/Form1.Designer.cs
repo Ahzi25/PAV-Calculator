@@ -20,6 +20,7 @@ namespace PAV___Calculator
             }
             base.Dispose(disposing);
         }
+        
 
         #region Windows Form Designer generated code
 
