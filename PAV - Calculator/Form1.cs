@@ -74,9 +74,7 @@ namespace PAV___Calculator
 
         private void PercentButton_Click(object sender, EventArgs e)
         {
-            if (TotalDisplay.Text == "0")
-                TotalDisplay.Clear();
-            TotalDisplay.Text += "%";
+            TotalDisplay.Text = (Double.Parse(TotalDisplay.Text) / 100).ToString();
         }
 
         private void NegateButton_Click(object sender, EventArgs e)
@@ -131,24 +129,30 @@ namespace PAV___Calculator
                         break;
                     }
                 case "-":
-                    TotalDisplay.Text = (resVal - Double.Parse(TotalDisplay.Text)).ToString();
-                    second_num = ((Double.Parse(TotalDisplay.Text) - resVal)*-1).ToString();
-                    prevOperation.Text = first_num + " " + second_num + " " + "=";
-                    break;
+                    {
+                        TotalDisplay.Text = (resVal - Double.Parse(TotalDisplay.Text)).ToString();
+                        second_num = ((Double.Parse(TotalDisplay.Text) - resVal) * -1).ToString();
+                        prevOperation.Text = first_num + " " + second_num + " " + "=";
+                        break;
+                    }
                 case "×":
-                    TotalDisplay.Text = (resVal * Double.Parse(TotalDisplay.Text)).ToString();
-                    second_num = (Double.Parse(TotalDisplay.Text) / resVal).ToString();
-                    prevOperation.Text = first_num + " " + second_num + " " + "=";
-                    break;
+                    {
+                        TotalDisplay.Text = (resVal * Double.Parse(TotalDisplay.Text)).ToString();
+                        second_num = (Double.Parse(TotalDisplay.Text) / resVal).ToString();
+                        prevOperation.Text = first_num + " " + second_num + " " + "=";
+                        break;
+                    }
                 case "÷":
-                    TotalDisplay.Text = (resVal / Double.Parse(TotalDisplay.Text)).ToString();
-                    second_num = (resVal / Double.Parse(TotalDisplay.Text)).ToString();
-                    prevOperation.Text = first_num + " " + second_num + " " + "=";
-                    break;
+                    {
+                        TotalDisplay.Text = (resVal / Double.Parse(TotalDisplay.Text)).ToString();
+                        second_num = (resVal / Double.Parse(TotalDisplay.Text)).ToString();
+                        prevOperation.Text = first_num + " " + second_num + " " + "=";
+                        break;
+                    }
                 default:
                     break;
             }
-            resVal = Double.Parse(TotalDisplay.Text);
+            //resVal = Double.Parse(TotalDisplay.Text);
             operand = "";
             
         }
