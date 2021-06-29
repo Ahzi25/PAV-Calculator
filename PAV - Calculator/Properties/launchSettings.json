@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PAV - Calculator": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    }
+  }
+}
