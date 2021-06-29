@@ -23,9 +23,25 @@ namespace PAV___Tracing_Form
 
         }
 
-        private void Start_Click(object sender, EventArgs e)
+        private void Clear_Click(object sender, EventArgs e)
         {
-           
+            FirstnameTB.Clear();
+            LastnameTB.Clear();
+            StreetAddressTB.Clear();
+            CityTB.Clear();
+            ProvinceTB.Clear();
+            PostalCodeTB.Clear();
+            SexTB.Clear();
+            DateOfBirthTB.Clear();
+        }
+
+        private void Confirm_Click(object sender, EventArgs e)
+        {
+            String Title = "Contact Tracing Form";
+            Button confirm = (Button)sender;
+            confirm.DialogResult = DialogResult.OK; 
+            MessageBox.Show("Your response has been saved. Thank you!", Title);
         }
     }
 }
+
