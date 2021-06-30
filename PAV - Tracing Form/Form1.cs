@@ -13,6 +13,7 @@ namespace PAV___Tracing_Form
     public partial class Form1 : Form
     {
         List<string> Details = new List<string>();
+        int counter = 0;
         public Form1()
         {
             InitializeComponent();
@@ -25,22 +26,55 @@ namespace PAV___Tracing_Form
 
         private void Clear_Click(object sender, EventArgs e)
         {
-            FirstnameTB.Clear();
-            LastnameTB.Clear();
-            StreetAddressTB.Clear();
-            CityTB.Clear();
-            ProvinceTB.Clear();
-            PostalCodeTB.Clear();
-            SexTB.Clear();
-            DateOfBirthTB.Clear();
+            foreach (Control x in this.Controls)
+            {
+                if (x is TextBox)
+                {
+                    if (x.Name.EndsWith("TB"))
+                    {
+                        x.Text = "";
+                    }
+                }
+            }
         }
 
         private void Confirm_Click(object sender, EventArgs e)
         {
-            String Title = "Contact Tracing Form";
-            Button confirm = (Button)sender;
-            confirm.DialogResult = DialogResult.OK; 
-            MessageBox.Show("Your response has been saved. Thank you!", Title);
+            foreach(Control x in this.Controls)
+            {
+                if(x is TextBox)
+                {
+                    if (x.Name.EndsWith("TB"))
+                    {
+                        if(x.Text == "")
+                        {
+
+                            String Title = "Contact Tracing Form";
+                            Button confirm = (Button)sender;
+                            confirm.DialogResult = DialogResult.OK;
+                            MessageBox.Show("Please complete the form.", Title);
+                            break;
+                        }
+                        else if(x.Text != "")
+                        {
+                            Details.Add(x.Text);
+                            counter += 1;
+                            if (counter == 8)
+                            {
+                                String Title = "Contact Tracing Form";
+                                Button confirm = (Button)sender;
+                                confirm.DialogResult = DialogResult.OK;
+                                MessageBox.Show("Thank you for your response!", Title);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(String.Join(", ", Details));
         }
     }
 }
