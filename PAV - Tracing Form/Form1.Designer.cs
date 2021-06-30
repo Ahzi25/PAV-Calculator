@@ -202,9 +202,9 @@ namespace PAV___Tracing_Form
             this.Lastname.AutoSize = true;
             this.Lastname.Location = new System.Drawing.Point(261, 85);
             this.Lastname.Name = "Lastname";
-            this.Lastname.Size = new System.Drawing.Size(82, 20);
+            this.Lastname.Size = new System.Drawing.Size(86, 20);
             this.Lastname.TabIndex = 27;
-            this.Lastname.Text = "Lastname *";
+            this.Lastname.Text = "Last name *";
             // 
             // FirstnameTB
             // 
@@ -218,9 +218,9 @@ namespace PAV___Tracing_Form
             this.Firstname.AutoSize = true;
             this.Firstname.Location = new System.Drawing.Point(68, 85);
             this.Firstname.Name = "Firstname";
-            this.Firstname.Size = new System.Drawing.Size(83, 20);
+            this.Firstname.Size = new System.Drawing.Size(87, 20);
             this.Firstname.TabIndex = 25;
-            this.Firstname.Text = "Firstname *";
+            this.Firstname.Text = "First name *";
             // 
             // PersonalID
             // 

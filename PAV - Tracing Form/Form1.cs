@@ -14,7 +14,6 @@ namespace PAV___Tracing_Form
     public partial class Form1 : Form
     {
         List<string> Details = new List<string>();
-        int counter = 0;
         public Form1()
         {
             InitializeComponent();
@@ -45,34 +44,38 @@ namespace PAV___Tracing_Form
             {
                 if(x is TextBox)
                 {
-                    if (x.Name.EndsWith("TB"))
+                    if(x.Text == "")
                     {
-                        if(x.Text == "")
-                        { 
-                            String Title = "Contact Tracing Form";
-                            Button confirm = (Button)sender;
-                            confirm.DialogResult = DialogResult.OK;
-                            MessageBox.Show("Please complete the form.", Title);
-                            break;
-                        }
-                        else if(x.Text != "")
-                        {
-                            Details.Add(x.Text);
-                            counter += 1;
-                            if (counter == 8)
-                            {
-                                string forsaving = String.Join(",", Details);
-                                TextWriter txt = new StreamWriter("C:\\Users\\paula\\source\\repos\\PAV - Calculator\\Details.txt");
-                                txt.Write(forsaving + "\n");
-                                txt.Close();
-                                String Title = "Contact Tracing Form";
-                                Button confirm = (Button)sender;
-                                confirm.DialogResult = DialogResult.OK;
-                                MessageBox.Show("Thank you for your response!", Title);
-                                counter = 0;
-                            }
-                        }
+                        String Title = "Contact Tracing Form";
+                        Button confirm = (Button)sender;
+                        confirm.DialogResult = DialogResult.OK;
+                        MessageBox.Show("Please complete the form.", Title);
+                        break;
                     }
+                    else if(x.Text != "")
+                    {
+                        Details.Add(FirstnameTB.Text);
+                        Details.Add(LastnameTB.Text);
+                        Details.Add(StreetAddressTB.Text);
+                        Details.Add(CityTB.Text);
+                        Details.Add(ProvinceTB.Text);
+                        Details.Add(PostalCodeTB.Text);
+                        Details.Add(SexTB.Text);
+                        Details.Add(DateOfBirthTB.Text);
+
+     
+                        string data = String.Join(",", Details); 
+                        TextWriter txt = new StreamWriter("C:\\Users\\paula\\source\\repos\\PAV - Tracing Form\\Details.txt");
+                        txt.Write(data + "\n");
+                        txt.Close();
+
+                        String Title = "Contact Tracing Form";
+                        Button confirm = (Button)sender;
+                        confirm.DialogResult = DialogResult.OK;
+                        MessageBox.Show("Thank you for your response!", Title);
+                        break;
+                    }
+                    
                 }
             }
         }
