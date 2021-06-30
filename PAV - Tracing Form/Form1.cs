@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace PAV___Tracing_Form
 {
@@ -47,8 +48,7 @@ namespace PAV___Tracing_Form
                     if (x.Name.EndsWith("TB"))
                     {
                         if(x.Text == "")
-                        {
-
+                        { 
                             String Title = "Contact Tracing Form";
                             Button confirm = (Button)sender;
                             confirm.DialogResult = DialogResult.OK;
@@ -61,20 +61,20 @@ namespace PAV___Tracing_Form
                             counter += 1;
                             if (counter == 8)
                             {
+                                string forsaving = String.Join(",", Details);
+                                TextWriter txt = new StreamWriter("C:\\Users\\paula\\source\\repos\\PAV - Calculator\\Details.txt");
+                                txt.Write(forsaving + "\n");
+                                txt.Close();
                                 String Title = "Contact Tracing Form";
                                 Button confirm = (Button)sender;
                                 confirm.DialogResult = DialogResult.OK;
                                 MessageBox.Show("Thank you for your response!", Title);
+                                counter = 0;
                             }
                         }
                     }
                 }
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(String.Join(", ", Details));
         }
     }
 }
