@@ -37,6 +37,7 @@ namespace PAV___Tracing_Form
                     }
                 }
             }
+            Details.Clear();
         }
 
         private void Confirm_Click(object sender, EventArgs e)
@@ -63,11 +64,10 @@ namespace PAV___Tracing_Form
                         Details.Add(PostalCodeTB.Text);
                         Details.Add(SexTB.Text);
                         Details.Add(DateOfBirthTB.Text);
-                        fullDetails.AddRange(Details);
      
-                        string data = String.Join(",", fullDetails); 
-                        TextWriter txt = new StreamWriter("C:\\Users\\paula\\source\\repos\\PAV - Tracing Form\\Details.txt");
-                        txt.Write(data, Environment.NewLine);
+                        string data = String.Join(",", Details); 
+                        TextWriter txt = File.AppendText("C:\\Users\\paula\\source\\repos\\PAV - Tracing Form\\Details.txt");
+                        txt.WriteLine(data);
                         txt.Close();
 
                         String Title = "Contact Tracing Form";

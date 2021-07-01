@@ -16,10 +16,11 @@ namespace PAV___Tracing_Form
         public Form2()
         {
             InitializeComponent();
-            string text = File.ReadAllText("C:\\Users\\paula\\source\\repos\\PAV - Tracing Form\\Details.txt");
-            MessageBox.Show(text);
-            var data = text.Split(",");
-            dataGridView1.Rows.Add(data);
+            string[] text = File.ReadAllLines("C:\\Users\\paula\\source\\repos\\PAV - Tracing Form\\Details.txt");
+            foreach(string a in text)
+            {
+                dataGridView1.Rows.Add(a.Split(","));
+            }
         }
     }
 }
