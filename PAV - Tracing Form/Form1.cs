@@ -14,6 +14,7 @@ namespace PAV___Tracing_Form
     public partial class Form1 : Form
     {
         List<string> Details = new List<string>();
+        List<string> fullDetails = new List<string>();
         public Form1()
         {
             InitializeComponent();
@@ -62,11 +63,11 @@ namespace PAV___Tracing_Form
                         Details.Add(PostalCodeTB.Text);
                         Details.Add(SexTB.Text);
                         Details.Add(DateOfBirthTB.Text);
-
+                        fullDetails.AddRange(Details);
      
-                        string data = String.Join(",", Details); 
+                        string data = String.Join(",", fullDetails); 
                         TextWriter txt = new StreamWriter("C:\\Users\\paula\\source\\repos\\PAV - Tracing Form\\Details.txt");
-                        txt.Write(data + "\n");
+                        txt.Write(data, Environment.NewLine);
                         txt.Close();
 
                         String Title = "Contact Tracing Form";
